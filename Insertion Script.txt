@@ -1,0 +1,133 @@
+insert into region
+values(1,'Misr Al-Gadida','Cairo');
+
+insert into region
+values(2,'Nasr City','Cairo');
+
+insert into region
+values(3,'Sheraton','Cairo');
+
+insert into region
+values(4,'10th of Ramadan','Al-Sharqia');
+
+--------------------------------------------------------------------
+insert into donor
+values(1001,'Sherif','Ayman','El-Aassar','Male','Korba',1);
+
+insert into donor
+values(1002,'Mohamed','Hamdy','Ahmad','Male','Alf Maskan',1);
+
+insert into donor
+values(1003,'Mostafa','Medhat','Mohamed','Male','Abbas Al-Akkad',2);
+
+insert into donor
+values(1004,'Omar','Khaled','Ashry','Male','10th of Ramadan',4);
+
+----------------------------------------------------------------------
+
+
+insert into volunteer
+values(1005,'Mahmoud','Aly','Amer','Male','Ahmad Esmat','Volunteer',null,1);
+
+insert into volunteer
+values(1006,'Moataz','Mahmoud','Fawzy','Male','Maadi','Volunteer',null,2);
+
+insert into volunteer
+values(1007,'Abeer','Amr','Mohamed','Female','Makram Ebied','Volunteer',null,3);
+
+insert into volunteer
+values(1008,'Amira','Aly','Mohamed','Female','Korba','Volunteer',null,4);
+
+--------------------------------------------------------------------------
+
+insert into DONOR_DONATION_TYPE
+values(1001,'Money');
+
+insert into DONOR_DONATION_TYPE
+values(1001,'Cloth');
+
+insert into DONOR_DONATION_TYPE
+values(1002,'Money');
+
+insert into DONOR_DONATION_TYPE
+values(1003,'Food');
+
+insert into DONOR_DONATION_TYPE
+values(1004,'Food');
+
+insert into DONOR_DONATION_TYPE
+values(1004,'Money');
+
+------------------------------------------------
+
+insert into IN_NEED_PERSON
+values(1009,'Somaya','Abdel-Meneem','Ahmed','Female','Roxy',1);
+
+insert into IN_NEED_PERSON
+values(1010,'Manal','Refaat','Fawzy','Female','Ard El-Golf',2);
+
+insert into IN_NEED_PERSON
+values(1011,'Ahmed','Abdel-Hameed','Ahmed','Male','Ammar Ibn Yasser',3);
+
+insert into IN_NEED_PERSON
+values(1012,'Tafeeda','Mohamed','El-Sherif','Female','10th Ramadan',4);
+
+
+--------------------------------------------------
+
+insert into COLLECT_DONATION
+values(1001,1005);
+
+insert into COLLECT_DONATION
+values(1002,1006);
+
+insert into COLLECT_DONATION
+values(1003,1006);
+
+insert into COLLECT_DONATION
+values(1004,1008);
+
+---------------------------------------------------------
+
+insert into NEED_PERSON_DONATION_TYPE
+values(1009,'Money');
+
+insert into NEED_PERSON_DONATION_TYPE
+values(1010,'Money');
+
+insert into NEED_PERSON_DONATION_TYPE
+values(1011,'Food');
+
+insert into NEED_PERSON_DONATION_TYPE
+values(1012,'Cloth');
+
+---------------------------------------------------
+
+
+insert into VOLUNTEER_PERSON_SEND_DONATION
+values (1005,1009);
+
+insert into VOLUNTEER_PERSON_SEND_DONATION
+values (1006,1010);
+
+insert into VOLUNTEER_PERSON_SEND_DONATION
+values (1007,1011);
+
+insert into VOLUNTEER_PERSON_SEND_DONATION
+values (1008,1012);
+
+
+---------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+

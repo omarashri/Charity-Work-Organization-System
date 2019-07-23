@@ -1,0 +1,41 @@
+
+Create table Volunteer  
+(V_ssn number(7) primary key, FirstName varchar2 (20),Minit varchar2 (20),LastName varchar2 (20),Gender varchar2(6),
+Address varchar2(20),Job_name varchar2(20),Super_ssn number(7) references Volunteer(V_ssn),Zip_code number(7) references Region(ZipCode) );
+
+create table Region
+(ZipCode number(7) primary key, RegionName varchar2(20),Governorate varchar2(7));
+
+Create table  Donor
+(D_ssn number(7) primary key, FirstName varchar (20), Minit varchar2 (20),LastName varchar2 (20),Gender varchar2(6),
+Address varchar2(20),Zip_code number(7) references Region(ZipCode));
+
+Create  table IN_Need_Person 
+(P_ssn number(7) primary key, FirstName varchar (20), Minit varchar2 (20),LastName varchar2 (20),Gender varchar2(6),
+ Address varchar2(20),Zip_code number(7) references Region(ZipCode) );
+ 
+Create  table  Dependent
+ (P_ssn number(7) references IN_Need_Person(P_ssn) , DName varchar2(20) , Gender varchar2(6) , Relationship varchar2(20),CONSTRAINT DEP_PER  PRIMARY KEY(P_ssn, DName));
+ 
+Create  table Volunteer_Person_Send_Donation
+(V_ssn number(7) References Volunteer (V_ssn) , P_ssn number(7) References IN_Need_Person 
+(P_ssn),CONSTRAINT vn_person_PK  PRIMARY KEY(V_ssn, P_ssn)); 
+
+create  table Collect_Donation
+(D_ssn number(7) References Donor(D_ssn) , V_ssn number(7) References Volunteer(V_ssn),CONSTRAINT dn_vn_PK PRIMARY KEY(D_ssn,V_ssn));
+
+create table  Donor_Donation_Type
+(D_ssn number(7) References Donor (D_ssn) ,Donation_type varchar2(7),
+CONSTRAINT dn_type_PK PRIMARY KEY(D_ssn,Donation_type));
+
+create table  Need_Person_Donation_Type
+(P_ssn number(7) References IN_Need_Person(P_ssn),Donation_type varchar2(7),
+CONSTRAINT need_type_PK PRIMARY KEY(P_ssn,Donation_type));
+
+
+
+
+
+
+
+
